@@ -1,0 +1,115 @@
+{
+  "info": {
+    "_postman_id": "0ffb0820-7ea8-4d40-96b5-bddcc4135690",
+    "name": "Vauban",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "getRandomCharacter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/vauban/character/random",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vauban", "character", "random"]
+        },
+        "description": "This method is to get random character from the available category by using the given path:\n\nhttp://localhost:3000/vauban/character/random"
+      },
+      "response": []
+    },
+    {
+      "name": "listAllCategories",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/vauban/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vauban", ""]
+        },
+        "description": "This method is to get all category list available by using the url.\n\nexample:\nhttp://localhost:3000/vauban/ "
+      },
+      "response": []
+    },
+    {
+      "name": "getCharacterByFreeText",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/vauban/freeText?search=blue",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vauban", "freeText"],
+          "query": [
+            {
+              "key": "search",
+              "value": "blue"
+            }
+          ]
+        },
+        "description": "This method is to get characters matching the free text given in query parameter.\nexample:\nhttp://localhost:3000/vauban/freeText?search=blue\n"
+      },
+      "response": []
+    },
+    {
+      "name": "getCharacterByName",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/vauban/character/luke",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vauban", "character", "luke"]
+        },
+        "description": "This method is to find a character by giving its name in path.\n\nexapmle:\n\n\nhttp://localhost:3000/vauban/character/{name}"
+      },
+      "response": []
+    },
+    {
+      "name": "getCharactersByKeyPair",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/vauban/category/gender/male/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["vauban", "category", "gender", "male", ""]
+        },
+        "description": "This is the method to find the character with any key and parameter value.\n\nexample:\n\nhttp://localhost:3000/vauban/category/{key}/{value}/"
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
